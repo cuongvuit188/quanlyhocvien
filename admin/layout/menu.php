@@ -58,7 +58,7 @@
             </li>
 
              <li>
-                <a href="http://localhost:8080/quanlyhocvien/admin/teamplate/list.php"><i class="fa fa-users" aria-hidden="true"></i> Quản lý học viên</a>
+                <a href="http://localhost:8080/quanlyhocvien/admin/teamplate/list/list_hocvien.php"><i class="fa fa-users" aria-hidden="true"></i> Quản lý học viên</a>
             </li>
            
         </ul>
