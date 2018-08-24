@@ -6,7 +6,7 @@
     require_once '../layout/head.html'
  ?>
 
- <link rel="stylesheet" type="text/css" href="list.css">
+ <link rel="stylesheet" type="text/css" href="style.css">
 <body>
 	<div id="wrapper">
         <?php

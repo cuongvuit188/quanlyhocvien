@@ -49,12 +49,16 @@
                 <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v"></i> abc </i></a>
                 
             <li>
-                <a href="#"><i class="fa fa-fw fa-file"></i> ABC</a>
+                <a href="#"><i class="fa fa-fw fa-file"></i></a>
             </li>
            
        
             <li>
                 <a href="#"><i class="fa fa-fw fa-desktop"></i> BCD</a>
+            </li>
+
+             <li>
+                <a href="http://localhost:8080/quanlyhocvien/admin/teamplate/list.php"><i class="fa fa-users" aria-hidden="true"></i> Quản lý học viên</a>
             </li>
            
         </ul>

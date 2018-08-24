@@ -1,20 +1,21 @@
+
 <?php
-    require_once '../layout/head.html'
+    include_once '../layout/head.html'
  ?>
- <link rel="stylesheet" type="text/css" href="insert.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
 <body>
-	<div id="wrapper">
+    <div id="wrapper">
         <?php
-            require_once '../layout/menu.php'
+            include_once '../layout/menu.php'
          ?>
         <div id="page-wrapper">
 
             <div class="container-fluid">
-		<div class="row">
+        <div class="row">
             <div class="col-lg-12">
                 <h1 class="page-header">
                     QUẢN LÝ SẢN PHẨM
-                    <small>Thêm mới sản phẩm</small>
+                    <small>Sửa sản phẩm</small>
                 </h1>
                 <ol class="breadcrumb">
                     <li>
@@ -24,17 +25,25 @@
                         <i class="fa fa-cubes"></i><a href="#"> Quản lý sản phẩm</a>
                     </li>
                     <li class="active">
-                        <i class="fa fa-plus"></i> Thêm mới sản phẩm
+                        <i class="fa fa-plus"></i> Sửa sản phẩm
                     </li>
                 </ol>
             </div>
         </div>
-		<div class="row">
-			<form role="form" method="post" action="" enctype="multipart/form-data">
+        <div class="row">
+            <form role="form" method="post" action="" enctype="multipart/form-data">
         <input type="hidden" name="_token" value="Ykx3ryp4bsyV6mTdxYwm5eX2aBXO4RFSZXhKIlgz">
         <div class="row  ">
             <label class="col-lg-3 right">Tên sản phẩm <span class="required">(*)</span></label>
             <div class="col-lg-5"><input type="text" class="form-control" name="tensp" value=""></div>
+        </div>
+                <div class="row ">
+            <label class="col-lg-3 right">Thể loại <span class="required">(*)</span></label>
+            <div class="col-lg-5">
+                <select class="form-control" name="theloai">
+                
+                </select>
+            </div>
         </div>
                 <div class="row ">
             <label class="col-lg-3 right">Giá <span class="required">(*)</span></label>
@@ -50,7 +59,7 @@
             <label class="col-lg-3 right">Khuyến mại</label>
             <div class="col-lg-5">
                 <div class="form-group input-group">
-                    <input type="number" class="form-control" name="khuyenmaisp" value="">
+                    <input type="number" class="form-control" name="khuyenmaisp" value="<">
                     <span class="input-group-addon">%</span>
                 </div>
             </div>
@@ -65,17 +74,19 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-3"></div>
+            <label class="col-lg-3 right">Tình trạng</label>
             <div class="col-lg-5">
-                <div class="row detail_image w100" id="ab">
-                </div>
+                <select class="form-control" name="tinhtrangsp">
+                   
+                </select>
             </div>
-        </div>
-                <div class="row button-area">
+           </div>
+       
+        <div class="row button-area">
             <div class="col-lg-3"></div>
             <div class="col-lg-2 right">
-            <button type="submit" class="btn btn-primary" value="add" name="insert">
-                <span class="glyphicon glyphicon-plus"></span> Thêm mới
+            <button type="submit" class="btn btn-primary" value="update" name="update">
+                <span class="glyphicon glyphicon-plus"></span> Sửa
             </button>
             </div>
             <div class="col-lg-2">
@@ -85,9 +96,9 @@
             </div>
         </div>
         </form>
-		</div>
-	</div>
+        </div>
+    </div>
 </div>
 <?php
-	require_once '../layout/footer.html'
+    include_once '../layout/footer.html'
  ?>
