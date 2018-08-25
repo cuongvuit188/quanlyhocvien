@@ -1,11 +1,11 @@
 <?php
-    require_once '../layout/head.html'
+    require_once '../../layout/head.html'
  ?>
  <link rel="stylesheet" type="text/css" href="style.css">
 <body>
 	<div id="wrapper">
         <?php
-            require_once '../layout/menu.php'
+            require_once '../../layout/menu.php'
          ?>
         <div id="page-wrapper">
 
@@ -89,5 +89,5 @@
 	</div>
 </div>
 <?php
-	require_once '../layout/footer.html'
+	require_once '../../layout/footer.html'
  ?>
