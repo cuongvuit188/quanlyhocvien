@@ -29,7 +29,7 @@
                           <a href="#">Trang chủ</a>
                     </li>
                     <li>
-                        <i class="fa fa-cubes"></i><a href="http://localhost:8080/quanlyhocvien/admin/teamplate/list/list_hocvien.php"> QUẢN LÝ HỌC VIÊN</a>
+                        <i class="fa fa-cubes"></i><a href="../list/list_hocvien.php"> QUẢN LÝ HỌC VIÊN</a>
                     </li>
                     <li class="active">
                         Danh sách học viên
@@ -37,7 +37,7 @@
                 </ol>
             </div>
         </div>
-        <div class="them"><a href="http://localhost:8080/quanlyhocvien/admin/teamplate/insert/insert_hocvien.php"><i class="fa fa-plus"></i>Thêm sản phẩm</a></div>
+        <div class="them"><a href="../insert/insert_hocvien.php"><i class="fa fa-plus"></i>Thêm sản phẩm</a></div>
          <div class="panel-body">
             <div class="table-responsive">
                 <table class="table table-bordered table-hover table-striped">
@@ -68,7 +68,7 @@
 						echo '<td>'.$rs["st_skype"].'</td>';
 						echo '<td>'.$rs["st_address"].'</td>';
 						echo '<td>'.$rs["school_name"].'</td>';
-						echo "<td><button type='button' class='btn btn-primary'><a href='../update/update.php?st_id=". $rs["st_id"] ."'> Edit</a></button></td>";
+						echo "<td><button type='button' class='btn btn-primary'><a href='../update/update_hocvien.php?st_id=". $rs["st_id"] ."'> Edit</a></button></td>";
 						echo "<td><button type='button' class='btn btn-danger'><a href='../delete/delete_hocvien.php?st_id=". $rs["st_id"] ."' onclick='return checkDelete()'>Delete</a></button></td>";
 						echo '</tr>';
 						$i++;

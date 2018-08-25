@@ -9,8 +9,8 @@
 	$email= $_POST["st_email"];
 	$skype = $_POST["st_skype"];
 	$address = $_POST["st_address"];
-	$school = $_POST["school_ID"];
-	$query = $conn->query("SELECT school_ID FROM school where school_name = '$school'"); 
+	$school = $_POST["school_id"];
+	$query = $conn->query("SELECT school_id FROM school where school_name = '$school'"); 
 	//kiểm tra sự tồn tại của t_id
 	$exist= mysqli_fetch_array($query);
 	if($exist){
@@ -21,7 +21,7 @@
 		$id = $conn->insert_id;
 	}
 	// thêm dữ liệu
-	$qr = $conn->query("UPDATE student SET st_name = '$name', st_date = '$date',st_gender = '$gender',st_phone = '$phone',st_email = '$email',st_skype = '$skype',st_address = '$address', school_ID = '$id' WHERE st_id = '$st_id'");	
+	$qr = $conn->query("UPDATE student SET st_name = '$name', st_date = '$date',st_gender = '$gender',st_phone = '$phone',st_email = '$email',st_skype = '$skype',st_address = '$address', school_id = '$id' WHERE st_id = '$st_id'");	
 	var_dump($qr);
 
 	if ($qr) {

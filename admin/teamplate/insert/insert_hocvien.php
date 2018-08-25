@@ -1,7 +1,7 @@
 <?php
 require_once '../../layout/head.html'
 ?>
-<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
 <body>
 	<div id="wrapper">
         <?php
@@ -30,64 +30,64 @@ require_once '../../layout/head.html'
                 </div>
             </div>
             <div class="row">
-             <form action ="btn_insert_hocvien.php" role="form" method="post" enctype="multipart/form-data">
-                <input type="hidden" name="_token" value="">
-                <div class="row  ">
-                    <label class="col-lg-3 right">Tên học viên: <span class="required">(*)</span></label>
-                    <div class="col-lg-5"><input type="text" class="form-control" name="st_name" value=""></div>
-                </div>
-                <div class="row ">
-                    <label class="col-lg-3 right">Ngày sinh: <span class="required">(*)</span></label>
-                    <div class="col-lg-5"><input type="date" name="st_date" class="form-control" value=""></div>
-                </div>
-                
-                <div class="row">
-                    <label class="col-lg-3 right">Giới tính: </label>
-                    <div class="col-lg-5"><input type="text" class="form-control" name="st_gender" value=""></div>
+             	<form action ="btn_insert_hocvien.php" role="form" method="post" enctype="multipart/form-data">
+	                <input type="hidden" name="_token" value="">
+	                <div class="row  ">
+	                    <label class="col-lg-3 right">Tên học viên: <span class="required">(*)</span></label>
+	                    <div class="col-lg-5"><input type="text" class="form-control" name="st_name" value=""></div>
+	                </div>
+	                <div class="row ">
+	                    <label class="col-lg-3 right">Ngày sinh: <span class="required">(*)</span></label>
+	                    <div class="col-lg-5"><input type="date" name="st_date" class="form-control" value=""></div>
+	                </div>
+	                
+	                <div class="row">
+	                    <label class="col-lg-3 right">Giới tính: </label>
+	                    <div class="col-lg-5"><input type="text" class="form-control" name="st_gender" value=""></div>
 
-                </div>
-                <div class="row">
-                    <label class="col-lg-3 right">Số ĐT: </label>
-                    <div class="col-lg-5"><input type="text" class="form-control" name="st_phone" value=""></div>
+	                </div>
+	                <div class="row">
+	                    <label class="col-lg-3 right">Số ĐT: </label>
+	                    <div class="col-lg-5"><input type="text" class="form-control" name="st_phone" value=""></div>
 
-                </div>
-                <div class="row">
-                    <label class="col-lg-3 right">Email: </label>
-                    <div class="col-lg-5"><input type="text" class="form-control" name="st_email" value=""></div>
+	                </div>
+	                <div class="row">
+	                    <label class="col-lg-3 right">Email: </label>
+	                    <div class="col-lg-5"><input type="email" class="form-control" name="st_email" value=""></div>
 
-                </div>
-                <div class="row">
-                    <label class="col-lg-3 right">Skype: </label>
-                    <div class="col-lg-5"><input type="text" class="form-control" name="st_skype" value=""></div>
+	                </div>
+	                <div class="row">
+	                    <label class="col-lg-3 right">Skype: </label>
+	                    <div class="col-lg-5"><input type="text" class="form-control" name="st_skype" value=""></div>
 
-                </div>
-                <div class="row">
-                    <label class="col-lg-3 right">Địa chỉ: </label>
-                    <div class="col-lg-5"><input type="text" class="form-control" name="st_address" value=""></div>
+	                </div>
+	                <div class="row">
+	                    <label class="col-lg-3 right">Địa chỉ: </label>
+	                    <div class="col-lg-5"><input type="text" class="form-control" name="st_address" value=""></div>
 
-                </div>
-                <div class="row">
-                    <label class="col-lg-3 right">Trường: </label>
-                    <div class="col-lg-5"><input type="text" class="form-control" name="t_id" value=""></div>
+	                </div>
+	                <div class="row">
+	                    <label class="col-lg-3 right">Trường: </label>
+	                    <div class="col-lg-5"><input type="text" class="form-control" name="t_id" value=""></div>
 
-                </div>
-                <div class="row button-area">
-                    <div class="col-lg-3"></div>
-                    <div class="col-lg-2 right">
-                        <button type="submit" class="btn btn-primary" value="add" name="insert">
-                            <span class="glyphicon glyphicon-plus"></span> Thêm mới
-                        </button>
-                    </div>
-                    <div class="col-lg-2">
-                        <a href="#" class="btn btn-danger">
-                            <span class="glyphicon glyphicon-remove"></span> Hủy bỏ
-                        </a>
-                    </div>
-                </div>
-            </form>
-        </div>
-    </div>
-</div>
+	                </div>
+	                <div class="row button-area">
+	                    <div class="col-lg-3"></div>
+	                    <div class="col-lg-2 right">
+	                        <button type="submit" class="btn btn-primary" value="add" name="insert">
+	                            <span class="glyphicon glyphicon-plus"></span> Thêm mới
+	                        </button>
+	                    </div>
+	                    <div class="col-lg-2">
+	                        <a href="#" class="btn btn-danger">
+	                            <span class="glyphicon glyphicon-remove"></span> Hủy bỏ
+	                        </a>
+	                    </div>
+	                </div>
+            	</form>
+        	</div>
+    	</div>
+	</div>
 <?php
 require_once '../../layout/footer.html'
 ?>
