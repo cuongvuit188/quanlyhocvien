@@ -56,7 +56,9 @@
             <li>
                 <a href="#"><i class="fa fa-fw fa-desktop"></i> BCD</a>
             </li>
-
+            <li>
+                <a href="../list/list_khoadaotao.php"><i class="fa fa-users" aria-hidden="true"></i> Quản lý khóa đào tạo</a>
+            </li>
              <li>
                 <a href="http://localhost:8080/quanlyhocvien/admin/teamplate/list/list_hocvien.php"><i class="fa fa-users" aria-hidden="true"></i> Quản lý học viên</a>
             </li>
