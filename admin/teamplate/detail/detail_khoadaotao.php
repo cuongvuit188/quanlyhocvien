@@ -43,11 +43,20 @@
 						<th>Người hướng dẫn</th>
 					</tr>
         <tr>
-          <td>xxx</td>
-          <td>xxxx</td>
-          <td>xxxx</td>
-          <td>xxxx</td>
+          <?php
+          $course_id=$_GET['course_id'];
+          $query2="SELECT * FROM  courses, subject, tutor WHERE courses.course_id=subject.course_id && subject.tutor_id=tutor.tutor_id && courses.course_id=$course_id";
+            $result1=mysqli_query($conn,$query2) or die("Loi truy van". mysqli_error($conn));
+            while ($rows=mysqli_fetch_array($result1,MYSQLI_ASSOC)) {
+                 ?>
+          <td><?php echo $rows['subject_name']; ?></td>
+          <td><?php echo $rows['date_start']; ?></td>
+          <td><?php echo $rows['date_end']; ?></td>
+          <td><?php echo $rows['tutor_name']; ?></td>
         </tr>
+        <?php
+             } 
+           ?>
 				</table>
         <button type="button" class='btn btn-info'><a href="../list/list_khoadaotao.php"> Quay lại</a></button>
 			</div>

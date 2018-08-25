@@ -88,7 +88,7 @@
           <td><?php echo $rows['course_name']; ?></td>
           <td><?php echo $rows['date_start']; ?></td>
           <td><?php echo $rows['date_end']; ?></td>
-          <td><button type='button' class='btn btn-info'><a href="../detail/detail_khoadaotao.php"> Detail</a></button></td>
+          <td><button type='button' class='btn btn-info'><a href="../detail/detail_khoadaotao.php?course_id=<?php echo $rows['course_id']; ?>"> Detail</a></button></td>
 		  <td><button type='button' class='btn btn-primary'><a href="../update/update_khoadaotao.php"> Edit</a></button></td>
 						<td><button type='button' class='btn btn-danger'><a href="#">Delete</a></button></td>
         </tr>
