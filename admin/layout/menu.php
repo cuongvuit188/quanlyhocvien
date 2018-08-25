@@ -3,7 +3,7 @@
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
         
-        <a class="navbar-brand" href="http://localhost:8080/quanlyhocvien/admin/index/index.php">Hệ thống quản trị Website Shop Men</a>
+        <a class="navbar-brand" href="http://localhost:8080/quanlyhocvien/admin/index/index.php">Hệ thống quản trị khóa đào tạo</a>
     </div>
     <!-- Top Menu Items -->
     <ul class="nav navbar-right top-nav">
@@ -28,7 +28,7 @@
             </ul>
         </li>
         <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> Cuongvuit188@gmail.com <b class="caret"></b></a>
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> quanlyhocvien@gmail.com <b class="caret"></b></a>
             
         </li>
     </ul>
@@ -60,7 +60,7 @@
                 <a href="../list/list_khoadaotao.php"><i class="fa fa-users" aria-hidden="true"></i> Quản lý khóa đào tạo</a>
             </li>
              <li>
-                <a href="http://localhost:8080/quanlyhocvien/admin/teamplate/list/list_hocvien.php"><i class="fa fa-users" aria-hidden="true"></i> Quản lý học viên</a>
+                <a href="../list/list_hocvien.php"><i class="fa fa-users" aria-hidden="true"></i> Quản lý học viên</a>
             </li>
            
         </ul>
