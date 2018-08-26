@@ -21,6 +21,7 @@
                             <li class="active">
                                 <i class="fa fa-Trang chủ"></i> Trang chủ
                             </li>
+                            <script></script>
                         </ol>
                     </div>
                 </div>

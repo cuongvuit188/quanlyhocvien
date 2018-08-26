@@ -9,7 +9,7 @@ ob_start();
     $conn = new mysqli($servername, $username, $password, $database);
     $sql = "DELETE FROM sanpham WHERE id_sanpham = '".$_GET['id']."'";
     if ($conn->query($sql) === TRUE) {
-    	header("location: http://localhost:8080/quanlyhocvien/admin/sanpham/danhsachsp.php",  true,  301 );  exit;
+    	header("location: ../list/list_hocvien.php");  exit;
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
     }
