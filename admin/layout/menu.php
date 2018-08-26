@@ -39,19 +39,19 @@
                 <a href="http://localhost:8080/quanlyhocvien/admin/index/index.php"><i class="fa fa-fw fa-Trang chủ"></i> Trang chủ</a>
             </li>
             <li>
-                <a href="http://localhost:8080/quanlyhocvien/admin/teamplate/list.php"><i class="fa fa-fw fa-bar-chart-o"></i> Danh sách SV theo KĐT</a>
+                <a href="/quanlyhocvien/admin/teamplate/list.php"><i class="fa fa-fw fa-bar-chart-o"></i> Danh sách SV theo KĐT</a>
             </li>
             <li>
                 <a href="#"><i class="fa fa-fw fa-table"></i> Quản lý trường</a>
             </li>
             <li>
-                   <li>
-                <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v"></i> abc </i></a>
+                <a href="/quanlyhocvien/admin/teamplate/list/list_monhoc.php" ><i class="fa fa-book"></i> Quản lý môn học </i></a>
                 
-            <li>
-                <a href="#"><i class="fa fa-fw fa-file"></i></a>
             </li>
-           
+           <li>
+                <a href="/quanlyhocvien/admin/teamplate/list/list_giaovien.php" ><i class="fa fa-user"></i> Quản lý người hướng dẫn </i></a>
+                
+            </li>
        
             <li>
                 <a href="#"><i class="fa fa-fw fa-desktop"></i> BCD</a>
