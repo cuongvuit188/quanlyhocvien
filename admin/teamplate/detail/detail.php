@@ -38,7 +38,7 @@
             <div class="table-responsive">
                 <table class="table table-bordered table-hover table-striped">
 					<tr>
-						<th>Mã học viên</th>
+						<th>STT</th>
 						<th>Họ và tên</th>
 						<th>Ngày sinh</th>
 						<th>Giới tính</th>
