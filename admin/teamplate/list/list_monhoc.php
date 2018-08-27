@@ -4,7 +4,9 @@
 	if (!$conn) {
 		echo 'Lỗi truy vấn ';
 	}
+
  ?>
+ <?php session_start();?>
  <?php
     require_once "../../layout/head.html";
  ?>
@@ -15,6 +17,7 @@
         <?php
             require_once '../../layout/menu.php';
          ?>
+        
         <div id="page-wrapper">
 
             <div class="container-fluid">
@@ -37,6 +40,9 @@
                 </ol>
             </div>
         </div>
+         <?php
+            require_once '../../layout/message.php';
+         ?>
         <div class="them"><a href="../insert/insert_monhoc.php"><i class="fa fa-plus"></i>Thêm môn học</a></div>
          <div class="panel-body">
             <div class="table-responsive">
