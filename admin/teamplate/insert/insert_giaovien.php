@@ -42,12 +42,12 @@ require_once '../../layout/head.html'
 	                </div>
 	                <div class="row ">
 	                    <label class="col-lg-3 right">Email người hướng dẫn: <span class="required">(*)</span></label>
-	                    <div class="col-lg-5"><input type="email" name="tutor_email" placeholder="name@example.com" class="form-control" value=""></div>
+	                    <div class="col-lg-5"><input type="email" required name="tutor_email" placeholder="name@example.com" class="form-control" value=""></div>
 	                </div>
 	                
 	                <div class="row ">
 	                    <label class="col-lg-3 right">Skype người hướng dẫn: <span class="required">(*)</span></label>
-	                    <div class="col-lg-5"><input type="text" name="tutor_skype" class="form-control" value=""></div>
+	                    <div class="col-lg-5"><input type="text" required name="tutor_skype" class="form-control" value=""></div>
 	                </div>
 	                
 	                
