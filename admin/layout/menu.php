@@ -3,7 +3,7 @@
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
         
-        <a class="navbar-brand" href="http://localhost:8080/quanlyhocvien/admin/index/index.php">Hệ thống quản trị Website Shop Men</a>
+        <a class="navbar-brand" href="../teamplate/index/index.php">Hệ thống quản trị Website Shop Men</a>
     </div>
     <!-- Top Menu Items -->
     <ul class="nav navbar-right top-nav">
@@ -36,10 +36,10 @@
     <div class="collapse navbar-collapse navbar-ex1-collapse">
         <ul class="nav navbar-nav side-nav">
             <li class="active">
-                <a href="http://localhost:8080/quanlyhocvien/admin/index/index.php"><i class="fa fa-fw fa-Trang chủ"></i> Trang chủ</a>
+                <a href="../../teamplate/index/index.php"><i class="fa fa-fw fa-Trang chủ"></i> Trang chủ</a>
             </li>
             <li>
-                <a href="http://localhost:8080/quanlyhocvien/admin/teamplate/list.php"><i class="fa fa-fw fa-bar-chart-o"></i> Danh sách SV theo KĐT</a>
+                <a href=../../teamplate/list.php"><i class="fa fa-fw fa-bar-chart-o"></i> Danh sách SV theo KĐT</a>
             </li>
             <li>
                 <a href="#"><i class="fa fa-fw fa-table"></i> Quản lý trường</a>
@@ -58,7 +58,7 @@
             </li>
 
              <li>
-                <a href="http://localhost:8080/quanlyhocvien/admin/teamplate/list/list_hocvien.php"><i class="fa fa-users" aria-hidden="true"></i> Quản lý học viên</a>
+                <a href="../../teamplate/list/list_hocvien.php"><i class="fa fa-users" aria-hidden="true"></i> Quản lý học viên</a>
             </li>
            
         </ul>

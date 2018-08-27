@@ -34,7 +34,9 @@
                 </ol>
             </div>
         </div>
-        <div class="them"><a href="http://localhost:8080/quanlyhocvien/admin/teamplate/insert.php"><i class="fa fa-plus"></i>Thêm sản phẩm</a></div>
+        <div class="them">
+            <a href="../../teamplate/insert.php"><i class="fa fa-plus"></i>Thêm sản phẩm</a>
+        </div>
          <div class="panel-body">
             <div class="table-responsive">
                 <table class="table table-bordered table-hover table-striped">
@@ -59,4 +61,4 @@
 </div>
 <?php
 	require_once '../../layout/footer.html'
- ?>
+?>
