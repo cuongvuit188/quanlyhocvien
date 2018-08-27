@@ -89,3 +89,4 @@
 </div>
 <?php
 	require_once '../../layout/footer.html'
+?>

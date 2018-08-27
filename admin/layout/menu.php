@@ -39,7 +39,7 @@
                 <a href="../../teamplate/index/index.php"><i class="fa fa-fw fa-Trang chủ"></i> Trang chủ</a>
             </li>
             <li>
-                <a href=../../teamplate/list.php"><i class="fa fa-fw fa-bar-chart-o"></i> Danh sách SV theo KĐT</a>
+                <a href="../../teamplate/list/list.php"><i class="fa fa-fw fa-bar-chart-o"></i> Danh sách SV theo KĐT</a>
 
             </li>
             <li>
