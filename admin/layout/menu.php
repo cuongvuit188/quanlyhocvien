@@ -36,10 +36,11 @@
     <div class="collapse navbar-collapse navbar-ex1-collapse">
         <ul class="nav navbar-nav side-nav">
             <li class="active">
-                <a href="http://localhost:8080/quanlyhocvien/admin/index/index.php"><i class="fa fa-fw fa-Trang chủ"></i> Trang chủ</a>
+                <a href="../../teamplate/index/index.php"><i class="fa fa-fw fa-Trang chủ"></i> Trang chủ</a>
             </li>
             <li>
-                <a href="../list/list.php"><i class="fa fa-fw fa-bar-chart-o"></i> Danh sách SV theo KĐT</a>
+                <a href=../../teamplate/list.php"><i class="fa fa-fw fa-bar-chart-o"></i> Danh sách SV theo KĐT</a>
+
             </li>
             <li>
                 <a href="../list/register.php"><i class="fa fa-fw fa-bar-chart-o"></i> Point</a>
@@ -56,7 +57,8 @@
                 <a href="../list/list_khoadaotao.php"><i class="fa fa-users" aria-hidden="true"></i> Quản lý khóa đào tạo</a>
             </li>
              <li>
-                <a href="../list/list_hocvien.php"><i class="fa fa-users" aria-hidden="true"></i> Quản lý học viên</a>
+                <a href="../../teamplate/list/list_hocvien.php"><i class="fa fa-users" aria-hidden="true"></i> Quản lý học viên</a>
+
             </li>
            
         </ul>
