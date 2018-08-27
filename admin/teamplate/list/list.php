@@ -1,9 +1,5 @@
 <?php 
     include "../connect.php";
-    $qr = $conn->query("SELECT student.st_id, student.st_name, student.st_date, student.st_gender, student.st_phone, student.st_email, student.st_skype, student.st_address, school.school_name FROM student INNER JOIN school ON student.school_ID = school.school_ID ");
-    if (!$conn) {
-        echo 'Lỗi truy vấn ';
-    }
  ?>
  <?php
     require_once "../../layout/head.html";
@@ -21,69 +17,76 @@
         <div class="row">
             <div class="col-lg-12">
                 <h1 class="page-header">
-                    QUẢN LÝ DANH SÁCH SINH VIÊN THEO KĐT
-                    <small>Danh sách KĐT</small>
+                    DANH SÁCH SV THEO KĐT
+                    <small>Danh sách SV theo KĐT</small>
                 </h1>
                 <ol class="breadcrumb">
                     <li>
                           <a href="#">Trang chủ</a>
                     </li>
                     <li>
-                        <i class="fa fa-cubes"></i><a href="../list/list_hocvien.php"> QUẢN LÝ HỌC VIÊN</a>
+                        <i class="fa fa-cubes"></i><a href="../list/list.php"> DANH SÁCH SV THEO KĐT</a>
                     </li>
                     <li class="active">
-                        Danh sách học viên
+                        Danh sách SV theo KĐT
                     </li>
                 </ol>
             </div>
         </div>
-        <div class="them"><a href="../insert/insert_hocvien.php"><i class="fa fa-plus"></i>Thêm sản phẩm</a></div>
+        <div class="row">
+            <div class="col-lg-6">
+        <div class="form-group" style="text-align: left;">
+            <form action="" method="GET" class="form-inline">
+                <select class="form-control" name="list_dkt">
+                    <?php $queryl = "SELECT course_id, course_name FROM courses";
+                    $result = mysqli_query($conn,$queryl) or die ("Loi truy van:".mysqli_error($conn));
+                        while($rows = mysqli_fetch_array($result,MYSQLI_ASSOC)){
+                    ?>
+                        <option value="<?php echo $rows['course_id'] ?>"><?php echo $rows['course_id'] .' - '.$rows['course_name']; ?></option>
+                    <?php
+                        }
+                    ?>
+                </select>
+                <button type="submit" class="btn btn-primary" name="search_kdt">Hiển thị danh sách</button>
+            </form>
+        </div>
+        </div>
+        </div>
          <div class="panel-body">
             <div class="table-responsive">
                 <table class="table table-bordered table-hover table-striped">
                     <tr>
-                        <th>Mã học viên</th>
-                        <th>Họ và tên</th>
-                        <th>Ngày sinh</th>
-                        <th>Giới tính</th>
-                        <th>Số điện thoại</th>
-                        <th>Email</th>
-                        <th>Skype</th>
-                        <th>Địa chỉ</th>
+                        <th>Mã sinh viên</th>
+                        <th>Tên sinh viên</th>
                         <th>Trường</th>
-                        <th>Sửa</th>    
-                        <th>Xóa</th>        
+                        <th>Chi tiết</th>
                     </tr>
-                    <?php 
-                    $i =1;
-                    while ($rs=mysqli_fetch_array($qr)) {
-                        echo "<tr>";
-                        echo '<td>'.$i.'</td>';
-                        // echo '<td>'.$rs["st_id"].'</td>';
-                        echo '<td>'.$rs["st_name"].'</td>';
-                        echo '<td>'.$rs["st_date"].'</td>';
-                        echo '<td>'.$rs["st_gender"].'</td>';
-                        echo '<td>'.$rs["st_phone"].'</td>';
-                        echo '<td>'.$rs["st_email"].'</td>';
-                        echo '<td>'.$rs["st_skype"].'</td>';
-                        echo '<td>'.$rs["st_address"].'</td>';
-                        echo '<td>'.$rs["school_name"].'</td>';
-                        echo "<td><button type='button' class='btn btn-primary'><a href='../update/update_hocvien.php?st_id=". $rs["st_id"] ."'> Edit</a></button></td>";
-                        echo "<td><button type='button' class='btn btn-danger'><a href='../delete/delete_hocvien.php?st_id=". $rs["st_id"] ."' onclick='return checkDelete()'>Delete</a></button></td>";
-                        echo '</tr>';
-                        $i++;
-                    }
-                    ?>          
+                    <?php
+                if (isset($_GET['search_kdt'])) {
+                    $abc = $_GET['list_dkt'];
+                    $queryl="SELECT * FROM `point` INNER JOIN student ON `point`.st_id = `student`.st_id where course_id = $abc";
+                    $result=mysqli_query($conn,$queryl) or die ("Loi truy van:".mysqli_error($conn));
+                    while($rows=mysqli_fetch_array($result,MYSQLI_ASSOC)){
+                        
+            ?>
+        <tr>
+          <td><?php echo $rows['st_id']; ?></td>
+          <td><?php echo $rows['st_name']; ?></td>
+          <td><?php echo $rows['school_id']; ?></td>    
+           <td><button type='button' class='btn btn-primary'><a href="../detail/detail.php?id_point=<?php echo $rows['id_point']; ?>">Chi tiết</a></button></td>
+        </tr>
+        <?php
+          } 
+          }     
+      ?>
                 </table>
-                <script language="JavaScript" type="text/javascript">
-                    function checkDelete(){
-                        return confirm('Are you sure?');
-                    }
-                </script>
             </div>
+
         </div>
     </div>
 </div>
 <?php
     require_once '../../layout/footer.html'
  ?>
+
+ 

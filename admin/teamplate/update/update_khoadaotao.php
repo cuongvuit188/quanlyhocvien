@@ -33,27 +33,30 @@ include_once '../../layout/head.html'
                     </div>
                 </div>
                 <div class="row">
-                    <form action="#" method="post">
-                        <div class="form-group">
-                            <label for="exampleInputEmail1">Mã khóa đào tạo:</label>
-                            <input type="text" class="form-control" name="" value="">
+                    <form action ="btn_update_hocvien.php" role="form" method="post" enctype="multipart/form-data">
+                        <div class="row  ">
+                            <label class="col-lg-3 right">Mã khóa đào tạo: <span class="required">(*)</span></label>
+                            <div class="col-lg-5"><input type="text" class="form-control" name="" value=""></div>
                         </div>
-                        <div class="form-group">
-                            <label for="exampleInputPassword1">Tên khóa đào tạo :</label>
-                            <input type="text" class="form-control" name="" value="">
+                        <div class="row ">
+                            <label class="col-lg-3 right">Tên khóa đào tạo: <span class="required">(*)</span></label>
+                            <div class="col-lg-5"><input type="text" name="" class="form-control" value=""></div>
                         </div>
-                        <div class="form-group">
-                            <label for="exampleInputPassword1">Ngày bắt đầu :</label>
-                            <input type="date" class="form-control" name="" value="">
-                        </div>                                
-                        <div class="form-group">
-                            <label for="exampleInputPassword1">Ngày kết thúc:</label>
-                            <input type="date" class="form-control" name="" value="">
+                        
+                        <div class="row">
+                            <label class="col-lg-3 right">Ngày bắt đầu: </label>
+                            <div class="col-lg-5"><input type="date" class="form-control" name="" value=""></div>
+
+                        </div>
+                        <div class="row">
+                            <label class="col-lg-3 right">Ngày kết thúc: </label>
+                            <div class="col-lg-5"><input type="date" class="form-control" name="" value=""></div>
+
                         </div>
                         <div class="row button-area">
                             <div class="col-lg-3"></div>
                             <div class="col-lg-2 right">
-                                <button type="submit" class="btn btn-primary" value="#" name="">
+                                <button type="submit" class="btn btn-primary" value="" name="">
                                     <span class="glyphicon glyphicon-plus"></span> Sửa
                                 </button>
                             </div>
