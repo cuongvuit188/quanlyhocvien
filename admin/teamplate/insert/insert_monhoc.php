@@ -65,7 +65,7 @@ require_once '../../layout/head.html'
 						}
 					 ?>
 	                <div class="row">
-	                    <label class="col-lg-3 right">Môn học: </label>
+	                    <label class="col-lg-3 right">Tên khóa học: </label>
 	                    <div class="col-lg-5">
 	                    	<select class="form-control" name="course_id">
 	                    	<?php while ($course =mysqli_fetch_array($course_query)) { ?>
