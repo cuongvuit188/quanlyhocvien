@@ -3,7 +3,9 @@
     $subject_id = $_GET['subject_id'];
     $qr = $conn->query("SELECT subject.* FROM subject INNER JOIN tutor ON subject.tutor_id = tutor.tutor_id INNER JOIN courses ON subject.course_id = courses.course_id  WHERE subject.subject_id = $subject_id");
     $rs = mysqli_fetch_array($qr);
+
  ?>
+ <?php session_start();?>
 <?php
 include_once '../../layout/head.html'
 ?>
@@ -35,6 +37,9 @@ include_once '../../layout/head.html'
                         </ol>
                     </div>
                 </div>
+                  <?php
+                    require_once '../../layout/message.php';
+                 ?>
                 <div class="row">
                 <form action ="btn_update_monhoc.php" role="form" method="post" enctype="multipart/form-data">
                     <input type="hidden" name="subject_id" value="<?= $rs['subject_id'] ?>">
