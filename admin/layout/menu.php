@@ -39,10 +39,10 @@
                 <a href="http://localhost:8080/quanlyhocvien/admin/index/index.php"><i class="fa fa-fw fa-Trang chủ"></i> Trang chủ</a>
             </li>
             <li>
-                <a href="/quanlyhocvien/admin/teamplate/list.php"><i class="fa fa-fw fa-bar-chart-o"></i> Danh sách SV theo KĐT</a>
+                <a href="../list/list.php"><i class="fa fa-fw fa-bar-chart-o"></i> Danh sách SV theo KĐT</a>
             </li>
             <li>
-                <a href="#"><i class="fa fa-fw fa-table"></i> Quản lý trường</a>
+                <a href="../list/register.php"><i class="fa fa-fw fa-bar-chart-o"></i> Point</a>
             </li>
             <li>
                 <a href="/quanlyhocvien/admin/teamplate/list/list_monhoc.php" ><i class="fa fa-book"></i> Quản lý môn học </i></a>
@@ -51,10 +51,6 @@
            <li>
                 <a href="/quanlyhocvien/admin/teamplate/list/list_giaovien.php" ><i class="fa fa-user"></i> Quản lý người hướng dẫn </i></a>
                 
-            </li>
-       
-            <li>
-                <a href="#"><i class="fa fa-fw fa-desktop"></i> BCD</a>
             </li>
             <li>
                 <a href="../list/list_khoadaotao.php"><i class="fa fa-users" aria-hidden="true"></i> Quản lý khóa đào tạo</a>
@@ -65,5 +61,4 @@
            
         </ul>
     </div>
-    <!-- /.navbar-collapse -->
 </nav>
