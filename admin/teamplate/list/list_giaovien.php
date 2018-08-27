@@ -74,20 +74,17 @@
 							   <a class='btn btn-primary' href='../update/update_giaovien.php?tutor_id=<?=  $rs['tutor_id'] ?>'> Edit</a> 
 							</td>
 							<td>
-
 								<?php 
 								$id = $rs["tutor_id"];
 								$course_query = $conn->query("SELECT subject.*  FROM `subject` WHERE subject.tutor_id = $id");
-						 		$rs = mysqli_fetch_array($course_query);
+						 		$tutor_id = mysqli_fetch_array($course_query);
 								?>
-								 <?php if(!$rs):?>  
+								 <?php if(!$tutor_id):?>  
 								<a class='btn btn-danger' href='../delete/delete_giaovien.php?tutor_id=<?= $rs["tutor_id"] ?>' onclick='return checkDelete()'>Delete</a> 
 								<?php else:?>
 									Không được xóa
 								<?php endif;?>
 							</td>
-
-
 					<?php } ?>      	
 				</table>
 				<script language="JavaScript" type="text/javascript">
