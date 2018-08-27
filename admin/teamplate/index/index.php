@@ -1,11 +1,11 @@
 <?php
-    require_once '../../layout/head.html'
+    require_once '../../layout/head.html';
  ?>
 <body>
 
     <div id="wrapper">
         <?php
-            require_once '../../layout/menu.php'
+            require_once '../../layout/menu.php';
          ?>
         <div id="page-wrapper">
 

@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.4
+-- version 4.8.0.1
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th8 22, 2018 lúc 10:01 AM
--- Phiên bản máy phục vụ: 10.1.28-MariaDB
--- Phiên bản PHP: 7.1.10
+-- Thời gian đã tạo: Th8 27, 2018 lúc 05:52 AM
+-- Phiên bản máy phục vụ: 10.1.32-MariaDB
+-- Phiên bản PHP: 7.0.30
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -48,10 +48,34 @@ INSERT INTO `courses` (`course_id`, `course_name`, `courses_code`, `date_start`,
 -- --------------------------------------------------------
 
 --
+-- Cấu trúc bảng cho bảng `point`
+--
+
+CREATE TABLE `point` (
+  `id_point` int(11) NOT NULL,
+  `st_id` int(11) NOT NULL,
+  `subject_id` int(11) NOT NULL,
+  `course_id` int(11) NOT NULL,
+  `point` int(11) NOT NULL,
+  `note` text COLLATE utf8mb4_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `point`
+--
+
+INSERT INTO `point` (`id_point`, `st_id`, `subject_id`, `course_id`, `point`, `note`) VALUES
+(1, 1, 1, 1, 9, 'Haha'),
+(2, 2, 2, 2, 9, 'ffdfdf'),
+(3, 3, 3, 3, 8, 'hjahahahaha');
+
+-- --------------------------------------------------------
+
+--
 -- Cấu trúc bảng cho bảng `school`
 --
 
-CREATE TABLE `school`(
+CREATE TABLE `school` (
   `school_id` int(11) NOT NULL,
   `school_name` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_vietnamese_ci;
@@ -68,7 +92,8 @@ INSERT INTO `school` (`school_id`, `school_name`) VALUES
 (5, 'đh điện lực'),
 (6, 'Đại học Báo Chí'),
 (7, 'dev'),
-(8, 'Dai hoc Cong Nghiep');
+(8, 'Dai hoc Cong Nghiep'),
+(9, '');
 
 -- --------------------------------------------------------
 
@@ -97,7 +122,8 @@ INSERT INTO `student` (`st_id`, `school_id`, `st_name`, `st_date`, `st_gender`, 
 (2, 2, 'Bùi Quang Tú', '1989-01-01', 'Nam', 989841944, 'quangtu@gmail.com', 'tu.quang', 'Bắc Ninh'),
 (3, 3, 'Lương Thái Dương', '1997-06-06', 'Nữ', 162596254, 'luongthaiduong@gmail.com', 'duong.luong', 'Hải Dương'),
 (4, 4, 'tu', '1996-02-09', 'Nữ', 0, 'nhuquynh@gmail.com', 'nhu', 'yen phong'),
-(5, 5, 'Hoang Tuan Tu', '1996-02-09', 'Nam', 125965236, 'tuantu@gmail.com', 'tuan.tu', 'Nam Dinh');
+(5, 5, 'Hoang Tuan Tu', '1996-02-09', 'Nam', 125965236, 'tuantu@gmail.com', 'tuan.tu', 'Nam Dinh'),
+(6, 9, '', '0000-00-00', '', 0, '', '', '');
 
 -- --------------------------------------------------------
 
@@ -157,11 +183,22 @@ INSERT INTO `tutor` (`tutor_id`, `tutor_name`, `tutor_phone`, `tutor_email`, `tu
 --
 ALTER TABLE `courses`
   ADD PRIMARY KEY (`course_id`);
+
+--
+-- Chỉ mục cho bảng `point`
+--
+ALTER TABLE `point`
+  ADD PRIMARY KEY (`id_point`),
+  ADD KEY `point_ibfk_1` (`st_id`),
+  ADD KEY `point_ibfk_2` (`subject_id`),
+  ADD KEY `course_id` (`course_id`);
+
 --
 -- Chỉ mục cho bảng `school`
 --
 ALTER TABLE `school`
   ADD PRIMARY KEY (`school_id`);
+
 --
 -- Chỉ mục cho bảng `student`
 --
@@ -192,17 +229,24 @@ ALTER TABLE `tutor`
 --
 ALTER TABLE `courses`
   MODIFY `course_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT cho bảng `point`
+--
+ALTER TABLE `point`
+  MODIFY `id_point` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
 --
 -- AUTO_INCREMENT cho bảng `school`
 --
 ALTER TABLE `school`
-  MODIFY `school_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `school_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT cho bảng `student`
 --
 ALTER TABLE `student`
-  MODIFY `st_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `st_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT cho bảng `subject`
@@ -221,16 +265,26 @@ ALTER TABLE `tutor`
 --
 
 --
+-- Các ràng buộc cho bảng `point`
+--
+ALTER TABLE `point`
+  ADD CONSTRAINT `point_ibfk_1` FOREIGN KEY (`st_id`) REFERENCES `student` (`st_id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `point_ibfk_2` FOREIGN KEY (`subject_id`) REFERENCES `subject` (`subject_id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `point_ibfk_3` FOREIGN KEY (`course_id`) REFERENCES `courses` (`course_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
 -- Các ràng buộc cho bảng `student`
 --
 ALTER TABLE `student`
   ADD CONSTRAINT `F1` FOREIGN KEY (`school_id`) REFERENCES `school` (`school_id`);
+
 --
 -- Các ràng buộc cho bảng `subject`
 --
 ALTER TABLE `subject`
   ADD CONSTRAINT `F2` FOREIGN KEY (`tutor_id`) REFERENCES `tutor` (`tutor_id`),
   ADD CONSTRAINT `F3` FOREIGN KEY (`course_id`) REFERENCES `courses` (`course_id`);
+COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
