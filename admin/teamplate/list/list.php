@@ -33,9 +33,6 @@
                 </ol>
             </div>
         </div>
-        <div class="them">
-            <a href="../../teamplate/insert.php"><i class="fa fa-plus"></i>Thêm sản phẩm</a>
-        <div class="row">
             <div class="col-lg-6">
         <div class="form-group" style="text-align: left;">
             <form action="" method="GET" class="form-inline">

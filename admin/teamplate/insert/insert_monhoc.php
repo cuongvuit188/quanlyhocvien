@@ -1,3 +1,4 @@
+<?php session_start();?>
 <?php
 require_once '../../layout/head.html'
 ?>
@@ -7,6 +8,7 @@ require_once '../../layout/head.html'
         <?php
         require_once '../../layout/menu.php'
         ?>
+
         <div id="page-wrapper">
 
             <div class="container-fluid">
@@ -29,16 +31,19 @@ require_once '../../layout/head.html'
                     </ol>
                 </div>
             </div>
+            <?php
+            require_once '../../layout/message.php';
+         ?>
             <div class="row">
              	<form action ="btn_insert_monhoc.php" role="form" method="post" enctype="multipart/form-data">
 	                <input type="hidden" name="_token" value="">
 	                <div class="row  ">
 	                    <label class="col-lg-3 right">Tên môn học: <span class="required">(*)</span></label>
-	                    <div class="col-lg-5"><input type="text" class="form-control" name="subject_name" value=""></div>
+	                    <div class="col-lg-5"><input type="text" class="form-control" required name="subject_name" value=""></div>
 	                </div>
 	                <div class="row ">
 	                    <label class="col-lg-3 right">Nội dung môn học: <span class="required">(*)</span></label>
-	                    <div class="col-lg-5"><input type="text" name="subject_content" class="form-control" value=""></div>
+	                    <div class="col-lg-5"><input type="text" required name="subject_content" class="form-control" value=""></div>
 	                </div>
 	                <?php 
 						include "../connect.php";

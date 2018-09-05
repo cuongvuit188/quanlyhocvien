@@ -22,7 +22,7 @@
                 </h1>
                 <ol class="breadcrumb">
                     <li>
-                          <a href="#">Trang chủ</a>
+                          <a href="../index/index.php">Trang chủ</a>
                     </li>
                     <li>
                         <i class="fa fa-cubes"></i><a href="http://localhost:8080/quanlyhocvien/admin/teamplate/list/list_hocvien.php"> QUẢN LÝ KHÓA ĐÀO TẠO</a>
