@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th8 27, 2018 lúc 05:52 AM
+-- Thời gian đã tạo: Th9 05, 2018 lúc 12:05 PM
 -- Phiên bản máy phục vụ: 10.1.32-MariaDB
 -- Phiên bản PHP: 7.0.30
 
@@ -65,9 +65,13 @@ CREATE TABLE `point` (
 --
 
 INSERT INTO `point` (`id_point`, `st_id`, `subject_id`, `course_id`, `point`, `note`) VALUES
-(1, 1, 1, 1, 9, 'Haha'),
+(1, 2, 1, 1, 9, 'ghghgh'),
 (2, 2, 2, 2, 9, 'ffdfdf'),
-(3, 3, 3, 3, 8, 'hjahahahaha');
+(3, 3, 3, 3, 8, 'hjahahahaha'),
+(4, 4, 2, 1, 6, 'hhhh'),
+(5, 5, 4, 2, 1, 'dfdfdf'),
+(6, 4, 4, 3, 1, 'fffff'),
+(7, 3, 2, 1, 5, 'hhhhhhhh');
 
 -- --------------------------------------------------------
 
@@ -118,7 +122,6 @@ CREATE TABLE `student` (
 --
 
 INSERT INTO `student` (`st_id`, `school_id`, `st_name`, `st_date`, `st_gender`, `st_phone`, `st_email`, `st_skype`, `st_address`) VALUES
-(1, 1, 'Bùi Thị Hao', '1996-08-28', 'Nữ', 942015791, 'haobt966@gmail.com', 'haobui.skype', 'Bắc Ninh'),
 (2, 2, 'Bùi Quang Tú', '1989-01-01', 'Nam', 989841944, 'quangtu@gmail.com', 'tu.quang', 'Bắc Ninh'),
 (3, 3, 'Lương Thái Dương', '1997-06-06', 'Nữ', 162596254, 'luongthaiduong@gmail.com', 'duong.luong', 'Hải Dương'),
 (4, 4, 'tu', '1996-02-09', 'Nữ', 0, 'nhuquynh@gmail.com', 'nhu', 'yen phong'),
@@ -147,7 +150,10 @@ INSERT INTO `subject` (`subject_id`, `course_id`, `tutor_id`, `subject_name`, `s
 (1, 1, 1, 'HCI', 'Human Computer Interaction'),
 (2, 2, 2, 'PPL', 'Principle of Programming Language'),
 (3, 3, 3, 'IST', 'Information System'),
-(4, 3, 3, 'SAD', 'System Analysis and Design');
+(4, 3, 3, 'SAD', 'System Analysis and Design'),
+(5, 1, 1, '', ''),
+(6, 1, 1, '', ''),
+(7, 1, 1, '', '');
 
 -- --------------------------------------------------------
 
@@ -234,7 +240,7 @@ ALTER TABLE `courses`
 -- AUTO_INCREMENT cho bảng `point`
 --
 ALTER TABLE `point`
-  MODIFY `id_point` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_point` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT cho bảng `school`
@@ -252,7 +258,7 @@ ALTER TABLE `student`
 -- AUTO_INCREMENT cho bảng `subject`
 --
 ALTER TABLE `subject`
-  MODIFY `subject_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `subject_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT cho bảng `tutor`

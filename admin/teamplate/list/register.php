@@ -21,8 +21,8 @@
 		<div class="row">
             <div class="col-lg-12">
                 <h1 class="page-header">
-                    QUẢN LÝ DANH SÁCH SINH VIÊN THEO KĐT
-                    <small>Danh sách KĐT</small>
+                    QUẢN LÝ DANH SÁCH ĐIỂM SINH VIÊN
+                    <small>Danh sách sinh viên</small>
                 </h1>
                 <ol class="breadcrumb">
                     <li>
@@ -37,7 +37,7 @@
                 </ol>
             </div>
         </div>
-        <div class="them"><a href="../insert/insert_hocvien.php"><i class="fa fa-plus"></i>Thêm danh sách</a></div>
+        <div class="them"><a href="../insert/insert.php"><i class="fa fa-plus"></i>Thêm danh sách</a></div>
          <div class="panel-body">
             <div class="table-responsive">
                 <table class="table table-bordered table-hover table-striped">

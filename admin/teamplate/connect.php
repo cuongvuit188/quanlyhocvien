@@ -1,8 +1,12 @@
 <?php
 $conn = mysqli_connect("localhost", "root", "", "quanlyhocvien");
-mysqli_set_charset($conn, 'UTF8');
+mysqli_set_charset($conn, 'UTF8'); 
 
-if (!$conn) {
-    echo "Kết nối không thành công";
+if(!$conn){
+ 
+   die('Ket noi that bai:'.mysqli_connect_error());
+ 
+}else{
+ 
+    echo"Ket noi thanh cong";
 }
-echo '<br>';
