@@ -1,3 +1,18 @@
+<?php 
+    include "../connect.php";
+    if(isset($_POST['submit'])){
+        $course_name=$_POST['course_name'];
+        $courses_code=$_POST['courses_code'];
+        $date_start=$_POST['date_start'];
+        $date_end=$_POST['date_end'];
+        $query="INSERT INTO courses(course_name, courses_code, date_start, date_end) VALUES('$course_name', '$courses_code', '$date_start', '$date_end')";
+        $result=mysqli_query($conn, $query) or die("Loi".mysqli_error($conn));
+        if ($result) {
+            header("Location: ../list/list_khoadaotao.php");
+        }
+    }
+ ?>
+
 <?php
 require_once '../../layout/head.html'
 ?>
@@ -31,30 +46,29 @@ require_once '../../layout/head.html'
             </div>
             <div class="row">
              <form action ="#" role="form" method="post" enctype="multipart/form-data">
-                <input type="hidden" name="_token" value="">
                 <div class="row  ">
                     <label class="col-lg-3 right">Mã khóa đào tạo: <span class="required">(*)</span></label>
-                    <div class="col-lg-5"><input type="text" class="form-control" name="" value=""></div>
+                    <div class="col-lg-5"><input type="text" class="form-control" name="courses_code" value=""></div>
                 </div>
                 <div class="row ">
                     <label class="col-lg-3 right">Tên khóa đào tạo: <span class="required">(*)</span></label>
-                    <div class="col-lg-5"><input type="texy" name="" class="form-control" value=""></div>
+                    <div class="col-lg-5"><input type="texy" name="course_name" class="form-control" value=""></div>
                 </div>
                 
                 <div class="row">
                     <label class="col-lg-3 right">Ngày bắt đầu: </label>
-                    <div class="col-lg-5"><input type="date" class="form-control" value=""></div>
+                    <div class="col-lg-5"><input type="date" name="date_start" class="form-control" value=""></div>
 
                 </div>
                  <div class="row">
                     <label class="col-lg-3 right">Ngày kết thúc: </label>
-                    <div class="col-lg-5"><input type="date" class="form-control" value=""></div>
+                    <div class="col-lg-5"><input type="date" name="date_end" class="form-control" value=""></div>
 
                 </div>
                 <div class="row button-area">
                     <div class="col-lg-3"></div>
                     <div class="col-lg-2 right">
-                        <button type="submit" class="btn btn-primary" value="add" name="">
+                        <button type="submit" class="btn btn-primary" value="add" name="submit">
                             <span class="glyphicon glyphicon-plus"></span> Thêm mới
                         </button>
                     </div>

@@ -5,7 +5,7 @@
         
         $school_name=$_POST['school_name'];
         $qr="UPDATE school SET school_name='$school_name' WHERE school_id='$school_id'";
-        $rs=mysqli_query($conn,$qr) or die("Lỗi".mysqli_error);
+        $rs=mysqli_query($conn,$qr) or die("Lỗi".mysqli_error($conn));
         if ($rs) {
             header("location: ../list/list_school.php");
         }

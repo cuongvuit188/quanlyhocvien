@@ -34,7 +34,7 @@ require_once "../../layout/head.html";
 						</ol>
 					</div>
 				</div>
-				<div class="them">
+				<div class="them" style="color: ">
 					<a href="../insert/insert_school.php"><i class="fa fa-plus"></i>Thêm trường học</a>				
 				</div>
 				<div class="panel-body">
@@ -51,7 +51,7 @@ require_once "../../layout/head.html";
 								while ($rs=mysqli_fetch_array($result)) {
 								?>     	
 							<tr>
-								<td><?php echo $rs['school_id']; ?></td>
+								<td><?php echo $i; ?></td>
 								<td> <?php echo $rs['school_name']; ?></td>
 								<td>
 									<button type='button' class='btn btn-primary'><i class='fa fa-pencil' aria-hidden='true'></i> <a href="../update/update_school.php?school_id=<?= $rs['school_id'] ?>"> Edit</a></button>
@@ -70,6 +70,7 @@ require_once "../../layout/head.html";
 								</td>
 							</tr>
 							<?php
+							$i++;
 							 } 
 							 ?>  	
 						</table>
