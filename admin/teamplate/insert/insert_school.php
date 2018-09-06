@@ -45,7 +45,7 @@ require_once '../../layout/head.html'
                 <input type="hidden" name="_token" value="">
                 <div class="row ">
                     <label class="col-lg-3 right">Tên trường học: <span class="required">(*)</span></label>
-                    <div class="col-lg-5"><input type="texy" name="school_name" class="form-control" value=""></div>
+                    <div class="col-lg-5"><input type="texy" required name="school_name" class="form-control" value=""></div>
                 </div>
                 <div class="row button-area">
                     <div class="col-lg-3"></div>

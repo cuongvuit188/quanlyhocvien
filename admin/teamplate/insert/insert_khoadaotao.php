@@ -48,21 +48,21 @@ require_once '../../layout/head.html'
              <form action ="#" role="form" method="post" enctype="multipart/form-data">
                 <div class="row  ">
                     <label class="col-lg-3 right">Mã khóa đào tạo: <span class="required">(*)</span></label>
-                    <div class="col-lg-5"><input type="text" class="form-control" name="courses_code" value=""></div>
+                    <div class="col-lg-5"><input type="text" required class="form-control" name="courses_code" value=""></div>
                 </div>
                 <div class="row ">
                     <label class="col-lg-3 right">Tên khóa đào tạo: <span class="required">(*)</span></label>
-                    <div class="col-lg-5"><input type="texy" name="course_name" class="form-control" value=""></div>
+                    <div class="col-lg-5"><input type="texy" required name="course_name" class="form-control" value=""></div>
                 </div>
                 
                 <div class="row">
                     <label class="col-lg-3 right">Ngày bắt đầu: </label>
-                    <div class="col-lg-5"><input type="date" name="date_start" class="form-control" value=""></div>
+                    <div class="col-lg-5"><input type="date" required name="date_start" class="form-control" value=""></div>
 
                 </div>
                  <div class="row">
                     <label class="col-lg-3 right">Ngày kết thúc: </label>
-                    <div class="col-lg-5"><input type="date" name="date_end" class="form-control" value=""></div>
+                    <div class="col-lg-5"><input type="date" required name="date_end" class="form-control" value=""></div>
 
                 </div>
                 <div class="row button-area">

@@ -55,21 +55,21 @@ include_once '../../layout/head.html'
                     <form action ="#" role="form" method="post" enctype="multipart/form-data">
                         <div class="row  ">
                             <label class="col-lg-3 right">Mã khóa đào tạo: <span class="required">(*)</span></label>
-                            <div class="col-lg-5"><input type="text" class="form-control" name="courses_code" value="<?php echo $rows['courses_code'] ?>"></div>
+                            <div class="col-lg-5"><input type="text" required class="form-control" name="courses_code" value="<?php echo $rows['courses_code'] ?>"></div>
                         </div>
                         <div class="row ">
                             <label class="col-lg-3 right">Tên khóa đào tạo: <span class="required">(*)</span></label>
-                            <div class="col-lg-5"><input type="text" name="course_name" class="form-control" value="<?php echo $rows['course_name'] ?>"></div>
+                            <div class="col-lg-5"><input type="text" required name="course_name" class="form-control" value="<?php echo $rows['course_name'] ?>"></div>
                         </div>
                         
                         <div class="row">
                             <label class="col-lg-3 right">Ngày bắt đầu: </label>
-                            <div class="col-lg-5"><input type="date" class="form-control" name="date_start" value="<?php echo $rows['date_start'] ?>"></div>
+                            <div class="col-lg-5"><input type="date" required class="form-control" name="date_start" value="<?php echo $rows['date_start'] ?>"></div>
 
                         </div>
                         <div class="row">
                             <label class="col-lg-3 right">Ngày kết thúc: </label>
-                            <div class="col-lg-5"><input type="date" class="form-control" name="date_end" value="<?php echo $rows['date_end'] ?>"></div>
+                            <div class="col-lg-5"><input type="date" required class="form-control" name="date_end" value="<?php echo $rows['date_end'] ?>"></div>
 
                         </div>
                         <div class="row button-area">
