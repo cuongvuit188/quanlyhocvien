@@ -37,7 +37,7 @@
                 </ol>
             </div>
         </div>
-        <div class="them"><a href="../insert/insert.php"><i class="fa fa-plus"></i>Thêm danh sách</a></div>
+        <!-- <div class="them"><a href="../insert/insert.php"><i class="fa fa-plus"></i>Thêm danh sách</a></div> -->
          <div class="panel-body">
             <div class="table-responsive">
                 <table class="table table-bordered table-hover table-striped">
@@ -59,9 +59,9 @@
 						echo '<td>'.$rs["course_id"].'</td>';
 						echo '<td>'.$rs["point"].'</td>';
 						echo '<td>'.$rs["note"].'</td>';
-						echo "<td><button type='button' class='btn btn-primary'><a href='../update/update_hocvien.php?st_id=". $rs["st_id"] ."'> Sửa</a></button></td>";
-						echo "<td><button type='button' class='btn btn-danger'><a href='../delete/delete_hocvien.php?st_id=". $rs["st_id"] ."' onclick='return checkDelete()'>Xóa</a></button></td>";
-						echo '</tr>';
+						// echo "<td><button type='button' class='btn btn-primary'><a href='../update/update_hocvien.php?st_id=". $rs["st_id"] ."'> Sửa</a></button></td>";
+						// echo "<td><button type='button' class='btn btn-danger'><a href='../delete/delete_hocvien.php?st_id=". $rs["st_id"] ."' onclick='return checkDelete()'>Xóa</a></button></td>";
+						// echo '</tr>';
 						$i++;
 					}
 					?>      	
