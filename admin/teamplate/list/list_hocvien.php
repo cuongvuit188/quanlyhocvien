@@ -1,9 +1,5 @@
 <?php 
 include "../connect.php";
-$qr = $conn->query("SELECT student.st_id, student.st_name, student.st_date, student.st_gender, student.st_phone, student.st_email, student.st_skype, student.st_address, school.school_name FROM student INNER JOIN school ON student.school_id = school.school_id ");
-if (!$conn) {
-	echo 'Lỗi truy vấn ';
-}
 ?>
 <?php
 require_once "../../layout/head.html";
@@ -58,6 +54,7 @@ require_once "../../layout/head.html";
 							</tr>
 							<?php 
 								$i =1;
+								$qr = $conn->query("SELECT * FROM student, school WHERE student.school_id = school.school_id ");
 								while ($rs=mysqli_fetch_array($qr)) {
 									echo "<tr>";
 									echo '<td>'.$i.'</td>';

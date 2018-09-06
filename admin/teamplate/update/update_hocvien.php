@@ -1,7 +1,7 @@
 <?php 
 include "../connect.php";
 $st_id = $_GET['st_id'];
-$qr = $conn->query("SELECT student.st_id, student.st_name, student.st_date, student.st_gender, student.st_phone, student.st_email, student.st_skype, student.st_address, school.school_name FROM student INNER JOIN school ON (student.school_ID = school.school_ID) and (st_id ='$st_id')");
+$qr = $conn->query("SELECT student.st_id, student.st_name, student.st_date, student.st_gender, student.st_phone, student.st_email, student.st_skype, student.st_address, school.school_name FROM student INNER JOIN school ON (student.school_id = school.school_id) and (st_id ='$st_id')");
 $rs = mysqli_fetch_array($qr);
 $res = $conn->query("SELECT * FROM school");
 ?>
