@@ -1,7 +1,7 @@
 <?php 
 	include "../connect.php";
 	$id_point=$_GET['id_point'];
-	$qr = $conn->query("SELECT * FROM subject, school, student, `point`, courses WHERE `point`.st_id=student.st_id AND `point`.subject_id=subject.subject_id AND courses.course_id=`point`.course_id AND student.school_id=school.school_id AND $id_point=`point`.id_point");
+	$qr = $conn->query("SELECT * FROM subject, school, student, `point`, courses WHERE `point`.st_id=`student`.st_id AND `point`.subject_id=`subject`.subject_id AND `courses`.course_id=`point`.course_id AND `student`.school_id=`school`.school_id AND $id_point=`point`.id_point");
 	if (!$conn) {
 		echo 'Lỗi truy vấn ';
 	}

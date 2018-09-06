@@ -7,6 +7,6 @@ if(!$conn){
    die('Ket noi that bai:'.mysqli_connect_error());
  
 }else{
- 
+
     echo "";
 }

@@ -74,6 +74,7 @@
 							   <a class='btn btn-primary' href='../update/update_giaovien.php?tutor_id=<?=  $rs['tutor_id'] ?>'> Edit</a> 
 							</td>
 							<td>
+
 								<?php 
 								$id = $rs["tutor_id"];
 								$course_query = $conn->query("SELECT subject.*  FROM `subject` WHERE subject.tutor_id = $id");
@@ -85,6 +86,8 @@
 									Không được xóa
 								<?php endif;?>
 							</td>
+
+
 					<?php } ?>      	
 				</table>
 				<script language="JavaScript" type="text/javascript">
